@@ -1,0 +1,193 @@
+<?php include 'header.php'; ?>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      padding: 150px;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .course-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 50px;
+      transition: box-shadow 0.3s ease-in-out;
+      height: 90%; 
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .course-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px; 
+      object-fit: cover; 
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .course-card .card-body {
+      padding: 20px;
+      height: calc(100% - 200px); 
+      overflow: hidden;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+    }
+
+    .course-card h5 {
+      color: #333;
+    }
+
+    .course-card p {
+      color: #555;
+      white-space: nowrap; 
+      overflow: hidden;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis; 
+    }
+  </style>
+  <title>E-learning - SMKN 5 BANDUNG</title>
+</head>
+<body>
+  <h3 class="text-left mb-5">E-learning - SMKN 5 BANDUNG</h3>
+  <div class="container">
+    <div class="row">
+
+      <?php
+      $courses = [
+        [
+          'image' => 'SKD.jpeg',
+          'title' => 'Simulasi Komunikasi Digital',
+          'description' => 'Pelajaran Simulasi dan Komunikasi Digital merupakan mata pelajaran yang memfokuskan pada pemahaman dan penerapan teknologi simulasi serta komunikasi dalam konteks digital.',
+          'link' => 'https://link-kursus-1.com'
+        ],
+        [
+          'image' => 'AIJ.jpg',
+          'title' => 'Administrasi Infrastruktur Jaringan',
+          'description' => 'Mata pelajaran yang mengajarkan siswa tentang manajemen dan administrasi jaringan komputer. Dalam kursus ini, siswa mempelajari konsep dasar jaringan, administrasi sistem operasi jaringan, keamanan, manajemen pengguna, penanganan masalah jaringan, pengelolaan perangkat keras jaringan, dan implementasi layanan jaringan.',
+          'link' => 'https://link-kursus-2.com'
+        ],
+        [
+            'image' => 'ASJ.jpg',
+            'title' => 'Administrasi Sistem Jaringan',
+            'description' => 'Dalam kursus ini, siswa akan mempelajari berbagai aspek terkait dengan penanganan dan pengaturan infrastruktur jaringan untuk mendukung operasional perusahaan.',
+            'link' => 'https://link-kursus-3.com'
+        ],
+        [
+            'image' => 'WAN.jpg',
+            'title' => 'Teknologi Jaringan Berbasis Luas',
+            'description' => 'Dalam konteks ini, siswa mempelajari konsep, perancangan, dan implementasi jaringan yang dapat menghubungkan lokasi-lokasi yang terpisah geografisnya, seperti kantor cabang atau lokasi bisnis yang berjauhan.',
+            'link' => 'https://link-kursus-4.com'
+        ],
+        [
+            'image' => 'SK.jpg',
+            'title' => 'Sistem Komputer',
+            'description' => 'Pelajaran ini memfokuskan pada pemahaman dan pengembangan sistem komputer. Dalam konteks ini, siswa mempelajari komponen-komponen dasar sistem komputer, termasuk perangkat keras (hardware) dan perangkat lunak (software).',
+            'link' => 'https://link-kursus-5.com'
+        ],
+        [
+            'image' => 'DG.jpg',
+            'title' => 'Desain Grafis',
+            'description' => 'Pelajaran ini fokus pada pengembangan keterampilan dan pengetahuan dalam menciptakan karya visual yang komunikatif dan estetis.',
+            'link' => 'https://link-kursus-6.com'
+        ],
+        [
+            'image' => 'TLJ.jpg',
+            'title' => 'Tekologi Layanan Jaringan',
+            'description' => 'Mata pelajaran ini memfokuskan pada pemahaman dan penerapan konsep-konsep yang terkait dengan desain, implementasi, dan pengelolaan layanan jaringan komunikasi.',
+            'link' => 'https://link-kursus-7.com'
+        ],
+        [
+            'image' => 'komjar.jpg',
+            'title' => 'Komputer dan Jaringan Dasar',
+            'description' => 'Pelajaran Komputer dan Jaringan Dasar (TKJ) merupakan mata pelajaran yang memberikan dasar-dasar pengetahuan tentang teknologi informasi, komputer, dan jaringan komunikasi. Fokus utama dari mata pelajaran ini adalah memberikan pemahaman yang komprehensif mengenai konsep dasar komputer dan cara kerja jaringan.',
+            'link' => 'https://link-kursus-8.com'
+        ],
+        [
+            'image' => 'mtk.jpg',
+            'title' => 'Matematika',
+            'description' => 'Pelajaran matematika merupakan mata pelajaran yang mempelajari konsep-konsep dasar dan metode-metode formal yang berkaitan dengan struktur, ruang, kuantitas, dan perubahan.',
+            'link' => 'https://link-kursus-9.com'
+        ],
+        [
+            'image' => 'indo.jpeg',
+            'title' => 'Bahasa Indonesia',
+            'description' => 'Mata pelajaran yang mengajarkan siswa tentang manajemen dan administrasi jaringan komputer. Dalam kursus ini, siswa mempelajari konsep dasar jaringan, administrasi sistem operasi jaringan, keamanan, manajemen pengguna, penanganan masalah jaringan, pengelolaan perangkat keras jaringan, dan implementasi layanan jaringan.',
+            'link' => 'https://link-kursus-10.com'
+        ],
+        [
+            'image' => 'sunda.jpg',
+            'title' => 'Bahasa Sunda',
+            'description' => 'Basa Sunda nyaeta basa anu dipaké ku urang Sunda, hiji suku bangsa anu aya di Jawa Barat sareng nagara bagian Banten di Indonésia. Ieu basa ogé dipaké dina pangajénan lokal jeung dina réngsé kamasyarakatan anu legana.',
+            'link' => 'https://link-kursus-11.com'
+        ],
+        [
+            'image' => 'fisika.jpg',
+            'title' => 'Fisika',
+            'description' => 'Pelajaran fisika adalah suatu disiplin ilmu yang mempelajari sifat-sifat dasar dari alam semesta dan fenomena alam yang terjadi di dalamnya. Fisika mencakup berbagai topik dan konsep, dan ini merupakan bagian integral dari kurikulum pendidikan di berbagai jenjang, mulai dari tingkat sekolah menengah hingga perguruan tinggi.',
+            'link' => 'https://link-kursus-12.com'
+        ],
+    ];
+        $contentPerPage = 6; 
+        $totalPages = ceil(count($courses) / $contentPerPage); 
+
+        $currentPage = isset($_GET['page']) ? max(1, min($totalPages, intval($_GET['page']))) : 1;
+        $startIndex = ($currentPage - 1) * $contentPerPage;
+
+     
+      for ($i = $startIndex; $i < min($startIndex + $contentPerPage, count($courses)); $i++) {
+        echo '<div class="col-md-4">';
+        echo '<div class="course-card animate__animated animate__fadeInUp" style="animation-delay: ' . (0.1 * ($i - $startIndex + 1)) . 's;">';
+        echo '<img src="asset/' . $courses[$i]['image'] . '" alt="' . $courses[$i]['title'] . '">';
+        echo '<div class="card-body">';
+        echo '<h5>' . $courses[$i]['title'] . '</h5>';
+        echo '<p>' . $courses[$i]['description'] . '</p>';
+        echo '<a href="' . $courses[$i]['link'] . '" class="btn btn-primary">Mulai Belajar</a>';
+
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+      }
+      ?>
+    </div>
+
+  
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item <?php echo ($currentPage == 1) ? 'disabled' : ''; ?>">
+          <a class="page-link" href="?page=<?php echo $currentPage - 1; ?>" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <?php
+        for ($i = 1; $i <= $totalPages; $i++) {
+          echo '<li class="page-item ' . (($i == $currentPage) ? 'active' : '') . '" aria-current="page">';
+          echo '<a class="page-link" href="?page=' . $i . '">' . $i . '</a>';
+          echo '</li>';
+        }
+        ?>
+        <li class="page-item <?php echo ($currentPage == $totalPages) ? 'disabled' : ''; ?>">
+          <a class="page-link" href="?page=<?php echo $currentPage + 1; ?>">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

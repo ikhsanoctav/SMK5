@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    
+    body {
+      padding-top: 75px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    
+    .navbar {
+      position: sticky;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .navbar.bg-white {
+      background-color: #fff !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      margin-right: 110px;
+      margin-top: 10px;
+      color: blue;
+      transition: color 0.3s;
+      cursor: pointer;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
+      margin-right: 10px;
+      max-height: 40px;
+    }
+
+    .navbar-brand span {
+      display: block;
+      font-size: 16px;
+      color: blue;
+    }
+
+    .navbar-brand:hover {
+      color: yellow;
+    }
+
+    .navbar-nav {
+      margin-right: 30px;
+    }
+
+    .navbar-nav.ml-auto .nav-item {
+      margin: 0 25px;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+      color: blue;
+      position: relative;
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .navbar-nav.ml-auto .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s;
+    }
+
+    .navbar-nav.ml-auto .nav-link:hover::before,
+    .navbar-nav.ml-auto .nav-link:focus::before,
+    .navbar-nav.ml-auto .nav-link:active::before {
+      border-bottom: 2px solid yellow;
+    }
+
+    .navbar-nav.ml-auto .nav-item.active .nav-link::before,
+    .navbar-nav.ml-auto .nav-link.active-link::before {
+      border-bottom: 2px solid yellow;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .navbar-nav.ml-auto .nav-link:hover,
+    .navbar-nav.ml-auto .nav-link:focus,
+    .navbar-nav.ml-auto .nav-link:active,
+    .navbar-nav.ml-auto .nav-item.active .nav-link {
+      color: yellow !important;
+    }
+
+    .navbar-nav.ml-auto .nav-link:hover::before,
+    .navbar-nav.ml-auto .nav-link:focus::before,
+    .navbar-nav.ml-auto .nav-link:active::before,
+    .navbar-nav.ml-auto .nav-item.active .nav-link::before {
+      border-bottom: 2px solid yellow;
+    }
+
+    .navbar:hover .navbar-nav {
+      background-color: transparent;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+      color: blue;
+      position: relative;
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .navbar-nav.ml-auto .nav-link:hover,
+    .navbar-nav.ml-auto .nav-link:focus,
+    .navbar-nav.ml-auto .nav-link:active,
+    .navbar-nav.ml-auto .nav-item.active .nav-link {
+      color: yellow !important;
+    }
+
+    .navbar-nav.ml-auto .nav-link:hover::before,
+    .navbar-nav.ml-auto .nav-link:focus::before,
+    .navbar-nav.ml-auto .nav-link:active::before,
+    .navbar-nav.ml-auto .nav-item.active .nav-link::before {
+      border-bottom: 2px solid yellow;
+    }
+
+    .navbar:hover .navbar-nav {
+      background-color: transparent;
+    }
+
+    .custom-toast {
+      position: fixed;
+      top: 20px;
+      right: 100px;
+      color: gold;
+      padding: 8px 15px;
+      z-index: 1000;
+      transition: background-color 0.3s, color 0.3s;
+      border: 2px solid gold;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .custom-toast:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    .custom-toast.clicked {
+      background-color: blue;
+      color: white;
+    }
+  </style>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      var navbar = document.querySelector('.navbar');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        navbar.classList.add('bg-white');
+      } else {
+        navbar.classList.remove('bg-white');
+      }
+    }
+  </script>
+
+
+  <title>SMKN 5 BANDUNG</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="beranda.php">
+      <img src="asset/152925565.png" alt="School Logo">
+      <span>SMKN 5<br>BANDUNG</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="beranda.php">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profil.php">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="berita.php">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fasilitas.php">Fasilitas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="elearning.php">E-learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="akademik.php">SIAKAD</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.php">Masuk</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="custom-toast" onclick="redirectToContact()">Hubungi Kami</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function activateNavItem(navItem) {
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+      link.classList.remove('active-link');
+    });
+
+    navItem.querySelector('.nav-link').classList.add('active-link');
+  }
+
+  function redirectToContact() {
+    window.location.href = 'https://www.instagram.com/ikhsanoctav/';
+  }
+
+  function toggleToast() {
+    var toast = document.querySelector('.custom-toast');
+    toast.classList.toggle('clicked');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var toast = document.querySelector('.custom-toast');
+    toast.classList.add('animate__animated', 'animate__slideInRight');
+
+    toast.addEventListener('click', function() {
+      redirectToContact();
+      toggleToast();
+    });
+
+    var currentPage = window.location.pathname.split('/').pop();
+    var activeNavItem = document.querySelector('.nav-item a[href="' + currentPage + '"]').closest('.nav-item');
+
+    if (activeNavItem) {
+      activateNavItem(activeNavItem);
+    }
+  });
+</script>
+
+
+</body>
+</html>

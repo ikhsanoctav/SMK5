@@ -1,0 +1,335 @@
+<?php include 'header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil Sekolah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+
+    
+    <style>
+       body {
+            padding-top: 100px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate__animated {
+            animation-fill-mode: both;
+        }
+
+        .animate__fadeInUp {
+            animation-name: fadeInUp;
+            animation-duration: 2s;
+        }
+
+        .content-box {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box:hover {
+            animation-name: fadeInUp;
+            animation-duration: 1s;
+        }
+
+        .bg-custom-color {
+            background-color: #000d1a;
+        }
+
+        .carousel-inner img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card {
+            height: 100%;
+            transition: border-color 0.3s ease; 
+            border-color: #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+             border-color: #007bff; 
+             box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+         }
+        
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            height: 100%;
+        }
+
+        .card-img-top {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-position: center center;
+
+        }
+        
+        .center-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .fasilitas-content-box {
+            padding: 20px;
+        }
+
+        .tentang-sekolah p {
+            text-align: justify;
+        }
+
+        .facility-box {
+            margin-bottom: 20px;
+        }
+
+        .facility-box img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .facility-box h4 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body class="animate__animated animate__fadeIn" >
+<section class="bg-light py-5 animate__animated animate__fadeIn">
+        <div class="container">
+            <h2 class="animate__animated animate__fadeIn">Tentang Sekolah</h2>
+            <p>
+            SMK Negeri 5 Bandung merupakan sekolah menengah kejuruan negeri yang berada di Kota Bandung, Jawa Barat, Indonesia. Berlokasi di Jalan Bojongkoneng No. 37A RT 01 RW 13, Kelurahan Sukapada, Kecamatan Cibeunying Kidul, Kota Bandung[1]. Masa pendidikan di SMK Negeri 5 Bandung ditempuh dalam waktu tiga tahun pelajaran, mulai dari kelas X hingga kelas XII, seperti pada umumnya masa pendidikan sekolah menengah kejuruan di Indonesia.
+            </p>
+            <p>
+            Pada awal berdirinya lembaga pendidikan ini dikenal dengan nama Sekolah Teknologi Menengah (STM) Negeri 3 Bandung yang diresmikan pada tanggal 2 Oktober 1965 dengan pimpinan sekolah Phoa Kian Gie. Sebelum berstatus negeri, sekolah ini merupakan sekolah yang berada di bawah Yayasan Pembinaan Pendidikan Teknik dengan nama STM YPPT. Berdasarkan Surat Keputusan (SK) Penegerian No. 133 / Dinpt / 1965 oleh Menteri Pendidikan dan Kebudayaan Republik Indonesia, untuk selanjutnya STM YPPT berubah menjadi STM Negeri 3 Bandung dan berkedudukan di Jalan Pajajaran Bandung, dan pindah ke Jalan Kebonjati pada tahun 1966. Tahun 1995, Kegiatan Belajar Mengajar secara bertahap pindah ke lokasi baru seluas 18.495 m2 di Jalan Bojongkoneng nomor 37A Bandung. Dan pada tahun 1996 seluruh kegiatan belajar mengajar sudah dilaksanakan di kampus baru tersebut. Sejak 7 Maret 1997 sesuai dengan Peraturan Menteri Pendidikan dan Kebudayaan RI Nomor: 036/0/1997 tentang perubahan nomenklatur SMKTA menjadi SMK, maka STM Negeri 3 Bandung pun mengalami perubahan menjadi SMK Negeri 5 Bandung.
+            </p>
+        </div>
+    </section>
+
+    <div class="container mt-4 animate__animated">
+        <div class="row">
+            <div class="col-md-6 content-box animate__animated animate__fadeIn">
+                <img src="asset/Visi.png" alt="Visi Image" class="img-fluid mb-3" width="100px">
+                <h2>Visi Sekolah</h2>
+                <p>Menjadi SMK unggulan tingkat Nasional yang inovatif , modern, dan peduli (Leading-Innovative-Modern-Aware) pada periode 2018-2024 </p>
+            </div>
+            <div class="col-md-6 content-box animate__animated animate__fadeIn">
+                <img src="asset/Misi.png" alt="Misi Image" class="img-fluid mb-3"width="100px">
+                <h2>Misi Sekolah</h2>
+                <ul>
+                    <li>Mengembangkan kebijakan pendidikan nasional dan kurikulum sekolah yang berparadigma lingkungan hidup serta berkelanjutan.</li>
+                    <li>Membina karakter peserta didik menjadi pribadi yang berakhlak Baik.</li>
+                    <li>Mendidik dan melatih peserta didik memiliki keterampilan abad 21 (Komunikasi, Kolaborasi, Berpikir kritis dan Kreatif)</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-light py-5 animate__animated animate__fadeIn">
+    <div class="container">
+        <h2 class="animate__animated animate__fadeIn">Daftar Jurusan</h2>
+        <div id="departmentCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 text-center d-flex align-items-center justify-content-center">
+                                <img src="asset/TKJ.jpg" class="card-img-top center-image" alt="Department 1 Image" style="margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teknik Komputer dan Jaringan</h5>
+                                    <p class="card-text">Jurusan Teknik Komputer dan Jaringan adalah disiplin ilmu yang fokus pada pengembangan, implementasi, dan pemeliharaan sistem komputer serta jaringan. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 text-center d-flex align-items-center justify-content-center">
+                                <img src="asset/profil.jpg" class="card-img-top center-image" alt="Department 2 Image" style="margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Produksi Film</h5>
+                                    <p class="card-text">Jurusan Produksi Film di SMK adalah program pendidikan yang fokus pada pengembangan keterampilan teknis dan kreatif dalam pembuatan film. Para siswa mempelajari seluruh proses produksi, termasuk penulisan skrip, pengambilan gambar, penyuntingan, dan desain audio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 text-center d-flex align-items-center justify-content-center">
+                                <img src="asset/Kelas 2.jpg" class="card-img-top center-image" alt="Department 3 Image" style="margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kimia Analis</h5>
+                                    <p class="card-text">Deskripsi jurusan 3.Jurusan Kimia Analis merupakan salah satu program kejuruan yang berfokus pada pengembangan keterampilan di bidang kimia analitik. Siswa dalam jurusan ini akan mempelajari berbagai teknik dan metode analisis kimia untuk mengidentifikasi dan mengukur komponen zat dalam suatu sampel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 text-center d-flex align-items-center justify-content-center">
+                                <img src="asset/geo.jpeg" class="card-img-top center-image" alt="Department 4 Image" style="margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Geomatika</h5>
+                                    <p class="card-text">Jurusan Geomatika adalah bidang studi yang menggabungkan teknologi geospasial dengan ilmu geografi untuk memahami, memetakan, dan menganalisis data geografis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 text-center d-flex align-items-center justify-content-center">
+                                <img src="asset/Kelas 3.jpg" class="card-img-top center-image" alt="Department 5 Image" style="margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Desain Permodelan Infrastruktur Bangunan</h5>
+                                    <p class="card-text">Jurusan Desain Permodelan Infrastruktur Bangunan adalah program pendidikan yang memfokuskan pada pengembangan keterampilan desain dan pemodelan untuk infrastruktur bangunan modern.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#departmentCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#departmentCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="bg-light py-5 animate__animated animate__fadeIn">
+    <div class="container">
+        <h2 class="animate__animated animate__fadeIn">Fasilitas Sekolah</h2>
+        <div class="row">
+        <div class="col-md-4 content-box animate__animated animate__fadeIn">
+                <div id="carouselKomputer" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                             <img src="asset/Gambar 1 LAB.jpg" class="d-block w-100" alt="Laboratorium Komputer 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/Gambar 2 LAB.jpg" class="d-block w-100" alt="Laboratorium Komputer 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/Gambar 3 LAB.jpg" class="d-block w-100" alt="Laboratorium Komputer 3">
+                        </div>
+                    </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselKomputer" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselKomputer" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+                <h4>Laboratorium Komputer</h4>
+            </div>
+            <div class="col-md-4 content-box animate__animated animate__fadeIn">
+                <div id="carouselKelas" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="asset/Kelas 1.jpg" class="d-block w-100" alt="Ruang Kelas 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="asset/Kelas 2.jpg" class="d-block w-100" alt="Ruang Kelas 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="asset/Kelas 3.jpg" class="d-block w-100" alt="Ruang Kelas 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselKelas" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselKelas" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+               </div>
+            <h4>Ruang Kelas</h4>
+        </div>
+            <div class="col-md-4 content-box animate__animated animate__fadeIn">
+                <div id="carouselperpus" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                    <img src="asset/Perpus 1.jpg" class="d-block w-100" alt="Perpustakaan 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/Perpus 2.jpg" class="d-block w-100" alt="Perpustakaan 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/Perpus 3.jpg" class="d-block w-100" alt="Perpustakaan 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselperpus" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselperpus" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <h4>Perpustakaan</h4>
+    </div>
+</div>
+</section>
+
+<footer id="myFooter" class="bg-custom-color text-white text-center py-1 animate__animated animate__fadeIn" style="display: none;">
+    <p>&copy; 2024 Ikhsan Octaviana Subagja - 20221320009. All Rights Reserved.</p>
+</footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("myFooter").style.display = "block";
+    });
+</script>
+    
+</body>
+</html>
+ 
